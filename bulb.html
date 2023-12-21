@@ -4,33 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="bulb.css">
 </head>
-<style>
-    .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 30vh;
-}
-.bulb{
-    padding: 20px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px black;
-}
-#btn{
-    background-color: red;
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
-    color: white;
-    font-size: 15px;
-    font-weight: 300;
-}
-</style>
 <body>
     <div class="card">
         <div class="container">
@@ -38,27 +13,6 @@
             <button id="btn">OFF</button>
         </div>
     </div>
-
-    <script>
-        let bulb = document.getElementById("bulb");
-        let btn = document.getElementById("btn");
-
-        let flag = 0;
-
-        btn.addEventListener("click", () => {
-            if (flag == 0) {
-                bulb.style.backgroundColor = "yellow";
-                flag = 1;
-                btn.innerText = "ON";
-                btn.style.backgroundColor = "green";
-            } else {
-                bulb.style.backgroundColor = "white";
-                flag = 0;
-                btn.innerText = "OFF";
-                btn.style.backgroundColor = "red";
-            }
-        });
-
-    </script>
+    <script src="bulb.js"></script>
 </body>
 </html>
